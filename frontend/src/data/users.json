@@ -1,0 +1,79 @@
+
+{
+    "usuarios": [
+        {
+            "rut_usuario": "12345678-9",
+            "nombre_usuario": "Juan",
+            "apellido_usuario": "Pérez",
+            "correo_usuario": "juan.perez@example.com"
+        },
+        {
+            "rut_usuario": "98765432-1",
+            "nombre_usuario": "Ana",
+            "apellido_usuario": "González",
+            "correo_usuario": "ana.gonzalez@example.com"
+        }
+    ],
+    "prestamos": [
+        {
+            "id_prestamo": "PREST-001",
+            "rut_usuario": "12345678-9",
+            "rut_supervisor": "SUP-001",
+            "fecha_inicio": "2024-01-01",
+            "fecha_termino": "2024-01-15",
+            "cantidad_prestada": 1,
+            "estado_prestamo": "activo"
+        },
+        {
+            "id_prestamo": "PREST-002",
+            "rut_usuario": "98765432-1",
+            "rut_supervisor": "SUP-002",
+            "fecha_inicio": "2024-02-01",
+            "fecha_termino": "2024-02-15",
+            "cantidad_prestada": 2,
+            "estado_prestamo": "finalizado"
+        }
+    ],
+    "objetos": [
+        {
+            "numero_uv_objeto": "OBJ-001",
+            "id_prestamo": "PREST-001",
+            "id_categoria": "CAT-001",
+            "nombre_objeto": "Laptop",
+            "fotografia_objeto": "laptop.jpg",
+            "cantidad_objeto": 5
+        },
+        {
+            "numero_uv_objeto": "OBJ-002",
+            "id_prestamo": "PREST-002",
+            "id_categoria": "CAT-002",
+            "nombre_objeto": "Proyector",
+            "fotografia_objeto": "proyector.jpg",
+            "cantidad_objeto": 2
+        }
+    ],
+    "supervisores": [
+        {
+            "rut_supervisor": "SUP-001",
+            "nombre_supervisor": "Carlos",
+            "apellido_supervisor": "López",
+            "correo_supervisor": "carlos.lopez@example.com"
+        },
+        {
+            "rut_supervisor": "SUP-002",
+            "nombre_supervisor": "Marta",
+            "apellido_supervisor": "Ramírez",
+            "correo_supervisor": "marta.ramirez@example.com"
+        }
+    ],
+    "categorias": [
+        {
+            "id_categoria": "CAT-001",
+            "nombre_categoria": "Electrónica"
+        },
+        {
+            "id_categoria": "CAT-002",
+            "nombre_categoria": "Equipamiento"
+        }
+]
+}
