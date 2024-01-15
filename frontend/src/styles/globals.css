@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tw-text-primary: #1F2937; /* Azul-Gris Oscuro para el texto principal en modo claro */
+  --tw-text-secondary: #6B7280; /* Gris Azulado para el texto secundario en modo claro */
+  --tw-background: #F3F4F6; /* Gris claro para el fondo en modo claro */
+  --tw-border-color: #D1D5DB; /* Gris Medio para bordes y divisiones en modo claro */
+  --tw-primary: #5B21B6; /* Violeta para elementos primarios en modo claro */
+  --tw-secondary: #34D399; /* Verde Esmeralda para elementos secundarios en modo claro */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tw-text-primary: #F9FAFB; /* Casi Blanco para el texto principal en modo oscuro */
+    --tw-text-secondary: #9CA3AF; /* Gris claro para el texto secundario en modo oscuro */
+    --tw-background-dark: #111827; /* Azul-Gris muy oscuro para el fondo en modo oscuro */
+    --tw-border-color: #374151; /* Azul-Gris oscuro para bordes y divisiones en modo oscuro */
+    --tw-primary: #C084FC; /* Violeta claro para elementos primarios en modo oscuro */
+    --tw-secondary: #22D3EE; /* Cian brillante para elementos secundarios en modo oscuro */
+  }
+}
+
+/* Clases personalizadas */
+.nav-container {
+    /* Estilos para el contenedor del nav */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+}
+
+.nav-link {
+    /* Estilos para los enlaces dentro del nav */
+    font-weight: bold; /* Texto en negrita */
+    color: inherit; /* Hereda el color del elemento padre */
+    text-decoration: none; /* Sin subrayado */
+    padding: 0.5rem 1rem; /* Espaciado interno para hacer el área de clic más grande */
+}
+
+.nav-link:hover {
+    /* Estilos para los enlaces al pasar el mouse */
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+/*
+Modo Claro:
+Primario (para acciones principales y énfasis): #5B21B6 (Violeta)
+Secundario (para acciones secundarias y destacados): #34D399 (Verde Esmeralda)
+Fondo (color principal de fondo): #F3F4F6 (Gris claro)
+Texto principal: #1F2937 (Azul-Gris Oscuro)
+Texto secundario: #6B7280 (Gris Azulado)
+Bordes y divisiones: #D1D5DB (Gris Medio)
+Modo Oscuro:
+Primario (para acciones principales y énfasis): #C084FC (Violeta claro)
+Secundario (para acciones secundarias y destacados): #22D3EE (Cian brillante)
+Fondo (color principal de fondo): #111827 (Azul-Gris muy oscuro)
+Texto principal: #F9FAFB (Casi Blanco)
+Texto secundario: #9CA3AF (Gris claro)
+Bordes y divisiones: #374151 (Azul-Gris oscuro)
+*/
