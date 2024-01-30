@@ -20,7 +20,7 @@ class Objeto(models.Model):
     cantidad_objeto = models.IntegerField()
     id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     # Assuming Prestamo has a OneToOne relationship with Objeto
-    id_prestamo = models.OneToOneField('Prestamo', on_delete=models.CASCADE, null=True)
+    
 
 # Supervisor model
 class Supervisor(models.Model):
@@ -38,3 +38,12 @@ class Prestamo(models.Model):
     fecha_termino = models.DateField()
     cantidad_prestada = models.IntegerField()
     estado_prestamo = models.CharField(max_length=100)
+    objetos = models.ManyToManyField(Objeto, through='DetallePrestamo')
+
+class DetallePrestamo(models.Model):
+    objeto = models.ForeignKey(Objeto, on_delete=models.CASCADE)
+    prestamo = models.ForeignKey(Prestamo, on_delete=models.CASCADE)
+    cantidad = models.IntegerField()
+    
+class Meta:
+    unique_together = [['objeto', 'prestamo']] 

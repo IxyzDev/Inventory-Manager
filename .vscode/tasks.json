@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Ejecutar Frontend Dev",
+            "type": "npm",
+            "script": "dev",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}\\frontend"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+         {
+            "label": "Activar entorno virtual y ejecutar Django",
+            "type": "shell",
+            "command": ".\\env\\Scripts\\Activate.ps1; if ($?) { python manage.py runserver }",
+            "options": {
+                "cwd": "${workspaceFolder}\\backend"
+            },
+
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
